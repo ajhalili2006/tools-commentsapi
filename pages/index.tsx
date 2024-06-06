@@ -39,7 +39,8 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
   const comment: IComment = {
     author: {
-      avatarUrl: 'https://github.com/recaptime-dev/brand-assets/raw/main/assets/logos/namespaces/squad.png',
+      avatarUrl:
+        'https://github.com/recaptime-dev/brand-assets/raw/main/assets/logos/namespaces/squad.png',
       login: 'community',
       url: 'https://github.com/RecapTimeBot',
     },
