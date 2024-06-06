@@ -22,30 +22,30 @@ import { env, meta } from '../lib/variables';
 import fallbacks from '../i18n.fallbacks.json';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;
+  //const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;
   const t = await getT(locale, 'config');
 
-  const path = join(process.cwd(), `README${localeSuffix}.md`);
+  const path = join(process.cwd(), `README.md`);
   const readme = readFileSync(path, 'utf-8');
   const contents = readme.split('<!-- configuration -->');
   const [afterConfig] = contents[1].split('<!-- end -->');
 
   contents[1] = `${afterConfig}\n## ${t('tryItOut')} 👇👇👇\n`;
 
-  const token = await getAppAccessToken(env.demo_repo).catch(() => '');
+  const token = await getAppAccessToken('ajhalili2006/tools-commentsapi').catch(() => '');
   const [contentBefore, contentAfter] = await Promise.all(
-    contents.map((section) => renderMarkdown(section, token, env.demo_repo)),
+    contents.map((section) => renderMarkdown(section, token, 'ajhalili2006/tools-commentsapi')),
   );
 
   const comment: IComment = {
     author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/in/106117',
-      login: 'giscus',
-      url: 'https://github.com/apps/giscus',
+      avatarUrl: 'https://github.com/recaptime-dev/brand-assets/raw/main/assets/logos/namespaces/squad.png',
+      login: 'community',
+      url: 'https://github.com/RecapTimeBot',
     },
     authorAssociation: 'APP',
     bodyHTML: contentBefore,
-    createdAt: '2021-05-15T13:21:14Z',
+    createdAt: '2024-06-06T17:57:46Z',
     deletedAt: null,
     id: 'onboarding',
     isMinimized: false,
@@ -57,7 +57,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     replies: [],
     replyCount: 0,
     upvoteCount: 0,
-    url: 'https://github.com/giscus/giscus',
+    url: 'https://github.com/ajhalili2006/tools-commentsapi',
     viewerDidAuthor: false,
     viewerHasUpvoted: false,
     viewerCanUpvote: false,
