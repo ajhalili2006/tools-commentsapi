@@ -2,26 +2,15 @@
 
 _[Open upstream README for translations and more up-to-date details](https://giscus.app)_
 
-This is a [giscus] instance used as a service for @recaptime-dev and friends,
-maintained under @ajhalili2006's Vercel account and powered by
-[GitHub Discussions][discussions].
+This is a [giscus] instance used as a service for @recaptime-dev and friends, maintained under @ajhalili2006's Vercel account and powered by [GitHub Discussions][discussions].
 
-You can monitor deployments at <https://github.com/ajhalili2006/tools-commentsapi> and we'll try our best
-to keep in sync with upstream (other than minimal changes, like this README).
+You can monitor deployments at <https://github.com/ajhalili2006/tools-commentsapi> and we'll try our best to keep in sync with upstream (other than minimal changes, like this README).
 
 ## How it works
 
 When giscus loads, the [GitHub Discussions search API][search-api] is used to find the Discussion associated with the page based on a chosen mapping (URL, `pathname`, `<title>`, etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction.
 
 To comment, visitors must authorize the [giscus app][giscus-app] to [post on their behalf][authorization] using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
-
-[giscus]: https://giscus.app
-[discussions]: https://docs.github.com/en/discussions
-[repo]: https://github.com/giscus/giscus
-[advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
-[search-api]: https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search
-[giscus-app]: https://github.com/apps/giscus
-[authorization]: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
 
 If you're using giscus, consider [starring 🌟 the upstream repo on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
 
@@ -50,6 +39,13 @@ See [CONTRIBUTING.md][contributing] (please contribute to upstream instead)
 [gitalk]: https://github.com/gitalk/gitalk
 [convert]: https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion
 [contributing]: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md
+[giscus]: https://giscus.app
+[discussions]: https://docs.github.com/en/discussions
+[repo]: https://github.com/giscus/giscus
+[advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+[search-api]: https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search
+[giscus-app]: https://github.com/apps/giscus
+[authorization]: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
 
 <!-- end -->
 ---
