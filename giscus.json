@@ -3,14 +3,15 @@
     "https://comments.andreijiroh.xyz",
     "https://wiki.andreijiroh.xyz",
     "https://comments-ajhalili2006.vercel.app",
-    "https://comments.tools.lorebooks.eu.org",
+    "https://comments.lorebooks.eu.org",
     "https://recaptime.dev",
     "https://recaptime.eu.org"
   ],
   "originsRegex": [
     "https://comments-ajhalili2006-([A-z0-9]|-)*andreijiroh-dev\\.vercel\\.app",
+    "https://comments-([A-z0-9]|-)*recaptime-dev\\.vercel\\.app",
     "https://*.lorebooks.eu.org",
-    "http://selfhost:[0-9]+"
+    "http://localhost:[0-9]+"
   ],
-  "defaultCommentOrder": "oldest"
+  "defaultCommentOrder": "newest"
 }
