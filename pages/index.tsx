@@ -19,7 +19,6 @@ import Router from 'next/router';
 import getT from 'next-translate/getT';
 import { AvailableLanguage } from '../lib/i18n';
 import { env, meta } from '../lib/variables';
-import fallbacks from '../i18n.fallbacks.json';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   //const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;

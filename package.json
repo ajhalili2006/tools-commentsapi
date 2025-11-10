@@ -11,8 +11,8 @@
     "cscript": "tsc client.ts --outDir public",
     "cthemes": "postcss styles/themes/*.css --dir public/themes --config styles/themes",
     "mscript": "google-closure-compiler < public/client.js --js_output_file public/client.js",
-    "dev": "yarn cscript --watch --preserveWatchOutput & yarn cthemes --watch & next dev",
-    "build": "yarn cscript && yarn cthemes && yarn mscript && next build",
+    "dev": "npm run cscript --watch --preserveWatchOutput & npm run cthemes --watch & next dev",
+    "build": "npm run cscript && npm run cthemes && npm run mscript && next build",
     "start": "next start",
     "lint": "stylelint styles/**/*.css && eslint . --cache --max-warnings 0",
     "lint:fix": "stylelint --fix styles/**/*.css && eslint --fix . --cache --max-warnings 0",
@@ -60,6 +60,5 @@
     "tailwindcss": "^3.4.17",
     "tailwindcss-vanilla-rtl": "^0.4.0",
     "typescript": "^5.7.2"
-  },
-  "packageManager": "yarn@4.11.0"
+  }
 }
